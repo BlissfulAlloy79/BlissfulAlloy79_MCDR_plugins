@@ -1,0 +1,10 @@
+{
+    "id": "storage_item_locator",
+    "version": "1.0.0",
+    "name": "storage_item_locator",
+    "description": "A plugin to locate items in the storage easily",
+    "author": "BlissfulAlloy79",
+    "dependencies": {
+        "mcdreforged": ">=1.0.0"
+    }
+}

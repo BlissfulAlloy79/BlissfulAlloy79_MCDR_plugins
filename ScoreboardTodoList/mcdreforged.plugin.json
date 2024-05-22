@@ -1,0 +1,10 @@
+{
+    "id": "todo",
+    "version": "1.0.0",
+    "name": "ScoreboardTodoList",
+    "description": "Manipulate scoreboard to act as a in-game todo list",
+    "author": "BlissfulAlloy79",
+    "dependencies": {
+        "mcdreforged": ">=1.0.0"
+    }
+}
