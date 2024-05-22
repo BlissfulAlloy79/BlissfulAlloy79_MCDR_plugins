@@ -1,6 +1,7 @@
 # StorageItemLocator
 
-[image]
+![ilocate_find](https://github.com/BlissfulAlloy79/BlissfulAlloy79_MCDR_plugins/assets/45236703/7a46c59c-81c7-4780-80f8-bf7308c89a2b)
+
 
 In minecraft 1.20, there are more than 1k survival obtainable items
 
@@ -28,9 +29,9 @@ fuzzy match: forgot the damn long item name? no worries
 
 it can still manage to understand at some point
 
-[image]
+![fuzzy_match](https://github.com/BlissfulAlloy79/BlissfulAlloy79_MCDR_plugins/assets/45236703/622c5702-4ba4-4c45-a4b4-816d8293c7dc)
 
-[image]
+![fuzzy_match_1](https://github.com/BlissfulAlloy79/BlissfulAlloy79_MCDR_plugins/assets/45236703/5c9196fe-a142-4a9b-b12d-9d7eb49c6210)
 
 ## Setup
 
@@ -62,7 +63,7 @@ In the newly opened `Area Editor` menu, turn `Manual Origin` to `ON`
 
 it is highly recommended to create a sub-region for each row of items in your storage, as shown below
 
-[image]
+![selection_example](https://github.com/BlissfulAlloy79/BlissfulAlloy79_MCDR_plugins/assets/45236703/0ff011bd-3101-4fed-9112-fd89c08cac0c)
 
 you can create a new sub-region in the `Area Editor` menu as mentioned in the previous step
 
@@ -70,11 +71,11 @@ for each row (sub-region), you must include every block and entity (i.e. item fr
 
 below is an example of my row selection (vertical)
 
-[image]
+![sub-region_example](https://github.com/BlissfulAlloy79/BlissfulAlloy79_MCDR_plugins/assets/45236703/715df5b3-7984-4bcf-a4e5-6ac41f556152)
 
 here is another example of my row selection (horizontal)
 
-[image]
+![sub-region_example_2](https://github.com/BlissfulAlloy79/BlissfulAlloy79_MCDR_plugins/assets/45236703/de6f9a5e-8112-4847-aafb-f21d39124f7f)
 
 save your litematic file
 
