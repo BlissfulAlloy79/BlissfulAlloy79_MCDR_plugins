@@ -35,7 +35,7 @@ it can still manage to understand at some point
 
 ## Setup
 
-put the plugin into the `/plguin` directory
+put the plugin into the `/plugins` directory
 
 start the server or execute `!!MCDR r all` if the server already started
 
