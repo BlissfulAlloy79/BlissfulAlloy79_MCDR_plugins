@@ -1,3 +1,5 @@
+import time
+
 from .config import Configuration
 from .utils import *
 import os
@@ -96,6 +98,14 @@ def generate_mapping(source: CommandSource) -> None:
     source.reply("finished!")
 
 
+@new_thread("Block Highlight")
+def highlightBlock(server: ServerInterface, x: float, y: float, z: float) -> None:
+    timestamp = time.time()
+    server.execute(f"/summon block_display {x} {y} {z} {{Glowing:1b, Tags:['block_highlight_{timestamp}'], transformation:{{left_rotation:[0f,0f,0f,1f], right_rotation:[0f,0f,0f,1f], translation:[-0.525f,-0.025f,-0.525f], scale:[1.05f,1.05f,1.05f]}}, block_state:{{Name:'minecraft:white_stained_glass'}}}}")
+    time.sleep(20)
+    server.execute(f"/kill @e[tag=block_highlight_{timestamp}]")
+
+
 def getItemLocation(source: CommandSource, ctx: CommandContext) -> None:
     item = ctx.command.split(' ')[2]
 
@@ -135,8 +145,9 @@ def getItemLocation(source: CommandSource, ctx: CommandContext) -> None:
     x = item_map[item][0]
     y = item_map[item][1]
     z = item_map[item][2]
-    server.execute(
-        f"summon falling_block {x} {y} {z} {{Time:200, DropItem:0b, BlockState:{{Name:'minecraft:white_stained_glass'}}, NoGravity:1b, Glowing:1b, Tags:['blockHighlight']}}")
+    # server.execute(
+    #     f"summon falling_block {x} {y} {z} {{Time:200, DropItem:0b, BlockState:{{Name:'minecraft:white_stained_glass'}}, NoGravity:1b, Glowing:1b, Tags:['blockHighlight']}}")
+    highlightBlock(server, x, y, z)
     source.reply(f"{item} is at [{x}, {y}, {z}]")
 
 
@@ -210,4 +221,3 @@ def on_load(server: PluginServerInterface, old) -> None:
 
 # TODO: rewrite loading logic with plugin reload
 # todo: separate functional and responsive function
-
